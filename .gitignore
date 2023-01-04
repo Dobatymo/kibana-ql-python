@@ -1,0 +1,10 @@
+*.bak
+
+__pycache__/
+*.py[cod]
+*.egg-info
+build/
+dist/
+.hypothesis/
+.mypy_cache/
+.coverage/
