@@ -47,6 +47,7 @@ repos:
       - id: mypy
         args: ["--install-types", "--non-interactive", "--show-error-codes"]
         additional_dependencies:
+          - genutility[string]==0.0.96
           - parsimonious==0.10.0
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.4.0
