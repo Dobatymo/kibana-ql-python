@@ -1,24 +1,35 @@
 [build-system]
-requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
+requires = [ "flit-core>=3.2,<4" ]
+
 [project]
-name = "kibana_ql"
-authors = [{name = "Dobatymo", email = "Dobatymo@users.noreply.github.com"}]
+name = "kibana-ql"
 readme = "README.md"
-license = {file = "LICENSE"}
-classifiers = ["License :: OSI Approved :: MIT License"]
-dynamic = ["version", "description"]
-requires-python = ">=3.7"
+license = { file = "LICENSE" }
+authors = [ { name = "Dobatymo", email = "Dobatymo@users.noreply.github.com" } ]
+requires-python = ">=3.8"
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dynamic = [ "description", "version" ]
 dependencies = [
-    "genutility[string]",
-    "parsimonious",
+  "genutility[string]",
+  "parsimonious",
 ]
 
-[project.urls]
-Source = "https://github.com/Dobatymo/kibana-ql-python"
+urls.Source = "https://github.com/Dobatymo/kibana-ql-python"
 
 [tool.black]
+line-length = 120
+
+[tool.ruff]
 line-length = 120
 
 [tool.isort]
@@ -36,4 +47,4 @@ warn_unreachable = true
 strict_equality = true
 
 [tool.bandit]
-skips = ["B101"]
+skips = [ "B101" ]
